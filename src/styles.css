@@ -1,0 +1,322 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+}
+
+.theme-button {
+    background-color: gold;
+    border-radius: 20px;
+    height: 40px;
+    margin: 30px;
+    position: relative;
+    width: 40px;
+}
+
+.hero {
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    height: 100vh;
+}
+
+.hero-area {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+.hero-text {
+    margin-bottom: 220px;
+    margin-left: 80px;
+}
+
+footer {
+    background-color: #e9b659;
+    color: black;
+    padding: 80px;
+    text-align: center;
+}
+
+nav {
+    background-color: #e9b659;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    background-color: #e9b659;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 500px;
+}
+
+li {
+    text-decoration: none;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.button {
+    background-color: coral;
+    border-radius: 20px;
+    color: black;
+    font-weight: 400;
+    font-size: 30px;
+    height: 60px;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button:active {
+    background-color: #e9b659;
+    color: black;
+}
+
+.socials {
+    padding-bottom: 220px;
+}
+
+.social {
+    margin: 20px;
+}
+
+.logo {
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.sub-section {
+    background-color: #e9b659;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 85px;
+}
+
+.sub-section-text {
+    background-color: #e9b659;
+    color: black;
+}
+
+.sub-section-alternative {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 85px;
+}
+
+.photo {
+    width: 200px;
+    border-radius: 150px;
+}
+
+.photo-container {
+    display: flex;
+    align-items: center;
+}
+
+.project-card {
+    width: 800px;
+    height: 700px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(197, 195, 195);
+    margin: 10px;
+    margin-top: auto;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px) {
+    .project-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.project-image {
+    margin-top: 25px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.dark {
+    background-color: darkgray;
+    color: white;
+    transition: transform 1.0s;
+}
+
+.dark>* {
+    color: rgb(255, 255, 255);
+}
+
+.dark .theme-button {
+    background-color: darkgray;
+}
+
+.dark .hero {
+    background-color: darkgray;
+}
+
+.dark .hero-area {
+    background-color: darkgray;
+}
+
+.dark footer {
+    background-color: #2b2c38;
+}
+
+.dark nav {
+    background-color: #2b2c38;
+}
+
+.dark ul {
+    background-color: #2b2c38;
+}
+
+.dark .sub-section {
+    background-color: #2b2c38;
+}
+
+.dark .sub-section-text {
+    background-color: #2b2c38;
+    color: white;
+}
+
+.dark .sub-section-alternative {
+    background-color: darkgray;
+}
+
+.dark a {
+    color: white;
+}
+
+hr {
+    color: chocolate;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: chocolate;
+}
+
+.project-link:hover {
+    transform: scale(1.1);
+}
+
+.dark .project-card {
+    background-color: #2b2c38;
+}
+
+.dark .project-link {
+    color: chocolate;
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-button:focus {
+    outline: 0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .menu-button {
+        align-self: flex-end;
+        background-color: transparent;
+        border: 0;
+        color: white;
+        display: block;
+        font-size: 40px;
+        margin: 20px;
+        margin-top: 10px;
+    }
+
+    .theme-button {
+        background-color: gold;
+        border-radius: 20px;
+        height: 40px;
+        margin: 10px;
+        margin-left: 80%;
+        margin-top: -65px;
+        width: 40px;
+    }
+
+    ul {
+        display: none;
+        margin: 0ppx;
+    }
+
+    ul.show {
+        display: block;
+        margin-left: auto;
+        margin-top: -60px;
+    }
+
+    nav {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        background-color: white;
+        border-radius: 5px;
+        display: block;
+        height: 40px;
+        margin: 10px;
+        margin-top: -52px;
+    }
+
+    .logo.display {
+        height: 100px;
+        margin: 20px;
+        margin-top: -140px;
+    }
+}
