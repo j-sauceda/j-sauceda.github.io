@@ -163,6 +163,7 @@ p {
 .project-container {
     display: flex;
     flex-direction: column;
+    margin-top: 25px;
 }
 
 @media only screen and (max-width: 1000px) {
