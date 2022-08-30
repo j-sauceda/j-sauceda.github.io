@@ -150,7 +150,7 @@ p {
 }
 
 .project-card {
-    width: 800px;
+    width: 600px;
     height: 700px;
     align-items: center;
     border-radius: 20px;
@@ -175,7 +175,7 @@ p {
 
 .project-image {
     margin-top: 25px;
-    width: 500px;
+    width: 450px;
     border-radius: 10px;
 }
 
