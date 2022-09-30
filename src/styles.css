@@ -150,7 +150,7 @@ p {
 }
 
 .project-card {
-    width: 600px;
+    width: 500px;
     height: 700px;
     align-items: center;
     border-radius: 20px;
@@ -161,9 +161,9 @@ p {
 }
 
 .project-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
 }
 
 @media only screen and (max-width: 1000px) {
