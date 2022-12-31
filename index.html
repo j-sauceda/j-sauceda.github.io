@@ -1,142 +1,246 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="src/styles.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/b784777401.js" crossorigin="anonymous"></script>
-        <title>Portfolio</title>
-        <meta charset="UTF-8" />
-    </head>
-    <body>
-        <section class="hero" id="hero">
-            <nav>
-                <img class="logo" id="logo" src="src/images/logo.jpg" alt="Jorge Sauceda's logo">
-                <ul id="nav-list">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="theme-button" id="theme-button">
-                    <i class="fa-regular fa-sun"></i>
-                </button>
-                <button class="menu-button" id="menu-button">
-                    <i class="fa-solid fa-circle-chevron-down"></i>
-                </button>
-            </nav>
-            <div class="hero-area" id="hero-area">
-                <div class="hero-text">
-                    <h1>Jorge A. Sauceda-Flores</h1>
-                    <p>PhD in Physics</p>
-                    <p>Data Scientist</p>
-                    <p>Full-stack Web Developer</p>
-                    <div class="button"><a href="#about">About me</a></div>
-                </div>
-                <div class="socials">
-                    <div>
-                        <a href="https://www.linkedin.com/in/jorge-arturo-sauceda-flores/" class="social">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="50" height="50" viewBox="0 0 24 24">
-                                <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://github.com/j-sauceda/" class="social">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="50" height="50" viewBox="0 0 24 24">
-                                <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://scholar.google.com.au/citations?user=yjDbFXoAAAAJ" class="social">
-                            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" fill="white" width="50" height="50" viewBox="0 0 50 50">
-                                <path
-                                d="M 25 2 C 12.309534 2 2 12.309534 2 25 C 2 37.690466 12.309534 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z M 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 13.390466 46 4 36.609534 4 25 C 4 13.390466 13.390466 4 25 4 z M 21 11 L 11 20 L 17.78125 20 C 17.80125 22.847 19.967531 25.730469 23.769531 25.730469 C 24.129531 25.730469 24.529688 25.690391 24.929688 25.650391 C 24.749688 26.100391 24.560547 26.470078 24.560547 27.080078 C 24.560547 28.230078 25.140391 28.920078 25.650391 29.580078 C 24.020391 29.690078 20.989766 29.879531 18.759766 31.269531 C 16.629766 32.559531 15.980469 34.43 15.980469 35.75 C 15.980469 38.47 18.500469 41 23.730469 41 C 29.930469 41 33.220703 37.510547 33.220703 34.060547 C 33.220703 31.530547 31.779453 30.279922 30.189453 28.919922 L 28.900391 27.890625 C 28.500391 27.570625 27.949219 27.120312 27.949219 26.320312 C 27.949219 25.510313 28.500703 24.989766 28.970703 24.509766 C 30.480703 23.309766 32 21.960234 32 19.240234 C 32 18.197234 31.756203 17.348391 31.408203 16.650391 L 35 13.570312 L 35 17.277344 C 34.405 17.623344 34 18.261 34 19 L 34 25 C 34 26.104 34.896 27 36 27 C 37.104 27 38 26.104 38 25 L 38 19 C 38 18.262 37.595 17.624344 37 17.277344 L 37 12 C 37 11.957 36.980609 11.920906 36.974609 11.878906 L 38 11 L 21 11 z M 24.269531 14.240234 C 27.269531 14.240234 28.820312 18.35 28.820312 21 C 28.820312 21.65 28.739922 22.819922 27.919922 23.669922 C 27.339922 24.259922 26.370938 24.699219 25.460938 24.699219 C 22.370938 24.699219 20.949219 20.620156 20.949219 18.160156 C 20.949219 17.210156 21.14 16.220938 21.75 15.460938 C 22.33 14.710938 23.339531 14.240234 24.269531 14.240234 z M 26.039062 30.609375 C 26.409063 30.609375 26.590859 30.610391 26.880859 30.650391 C 29.620859 32.630391 30.800781 33.620234 30.800781 35.490234 C 30.800781 37.760234 28.97 39.460938 25.5 39.460938 C 21.64 39.460938 19.160156 37.590469 19.160156 34.980469 C 19.160156 32.370469 21.459766 31.499219 22.259766 31.199219 C 23.769766 30.679219 25.719062 30.609375 26.039062 30.609375 z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jorge Sauceda's Portfolio</title>
+    <link rel="stylesheet" href="dist/main.css" />
+    <script
+      src="https://kit.fontawesome.com/b784777401.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Alpine Container -->
+    <div
+      class="text-slate-900 bg-gray-100 dark:bg-slate-400 dark:text-white"
+      x-data="{ profile: {}, projects: [], lightTheme: true, showMenu: false }"
+      x-init="profile = await (await fetch('https://sa-east-1.aws.data.mongodb-api.com/app/portfolio_api-shhvc/endpoint/profile')).json()"
+    >
+      <!-- Navbar -->
+      <nav class="relative container mx-auto p-4 bg-amber-300 dark:bg-gray-800">
+        <div class="flex items-center justify-between">
+          <div class="p-1">
+            <img class="h-16" :src="profile.logo_url" alt="Logo image" />
+          </div>
+          <div class="hidden md:flex space-x-7">
+            <a class="navbar-item" href="#hero">About</a>
+            <a class="navbar-item" href="#projects">Projects</a>
+            <a class="navbar-item" href="#contact">Contact</a>
+          </div>
+          <div class="flex space-x-3">
+            <button @click="lightTheme = !lightTheme; toggleTheme(lightTheme)">
+              <i
+                class="fa-regular fa-xl dark:text-white"
+                x-bind:class="lightTheme ? 'fa-moon' : 'fa-sun' "
+              ></i>
+            </button>
+            <button class="block md:hidden" @click="showMenu=!showMenu">
+              <i
+                class="fa-solid fa-xl"
+                x-bind:class="!showMenu ? 'fa-circle-chevron-down' : 'fa-circle-chevron-up' "
+              ></i>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div
+          x-show="showMenu"
+          class="absolute flex flex-col items-center self-end py-8 mt-4 space-y-5 left-6 right-6 bg-amber-300 bg-opacity-80 drop-shadow-md sm:w-auto sm:self-center md:hidden dark:bg-gray-800 dark:bg-opacity-30"
+        >
+          <a class="navbar-item" href="#hero" @click="showMenu=!showMenu"
+            >About</a
+          >
+          <a class="navbar-item" href="#projects" @click="showMenu=!showMenu"
+            >Projects</a
+          >
+          <a class="navbar-item" href="#contact" @click="showMenu=!showMenu"
+            >Contact</a
+          >
+        </div>
+      </nav>
+
+      <!-- Spinner -->
+      <section x-show="!profile" class="flex justify-center items-center">
+        <div
+          class="spinner-grow inline-block w-20 h-20 bg-current rounded-full opacity-0"
+          role="status"
+        >
+          <p>Loading profile... please wait</p>
+        </div>
+      </section>
+
+      <!-- Hero Section -->
+      <section x-show="profile" id="hero">
+        <div
+          class="container flex flex-col-reverse items-center px-4 mx-auto mt-10 space-between-y-4 md:space-y-0 md:flex-row"
+        >
+          <div class="flex flex-col mb-20 mr-10 space-y-10 md:w-3/4">
+            <h1 class="max-w-md" x-text="profile.name"></h1>
+            <p class="font-medium" x-text="profile.degree"></p>
+            <p x-text="profile.description"></p>
+            <div class="flex flex-row justify-between">
+              Find me on:
+              <a x-bind:href="profile.linkedin_url" class="social">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+              </a>
+              <a x-bind:href="profile.github_url" class="social">
+                <i class="fa-brands fa-github fa-2xl"></i>
+              </a>
+              <a x-bind:href="profile.gitlab_url" class="social">
+                <i class="fa-brands fa-gitlab fa-2xl"></i>
+              </a>
+              <a x-bind:href="profile.google_scholar_url" class="social">
+                <i class="fa-solid fa-graduation-cap fa-2xl"></i>
+              </a>
             </div>
-        </section>
-        <section class="sub-section" id="about">
-            <div class="sub-section-text">
-                <h2>About me</h2>
-                <p>Hello! I am Jorge A. Sauceda-Flores, a Physicist, Data Scientist and Web Developer.<p>
-                <p>My research interests include quantum magnetism, light-matter interactions, machine learning algorithms, statistics and game theory.</p>
-                <p>I have experience working with Python & Django, R and SQL, C/C++, Java, PHP, NodeJS & ReactJS, Matlab/Octave, Mathematica, LaTeX, GNU/Linux, *BSD, and more.</p>
-                <p>I am also a language & geometry geek, chess aficionado, and football soccer fan.</p>
+          </div>
+          <div class="md:w-1/4">
+            <img
+              class="rounded-lg"
+              x-bind:src="profile.image_url"
+              alt="Jorge's photo"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Spinner -->
+      <section
+        x-show="!profile"
+        class="flex justify-center items-center bg-amber-300 dark:bg-gray-800"
+      >
+        <div
+          class="spinner-grow inline-block w-20 h-20 bg-current rounded-full opacity-0 dark:text-white"
+          role="status"
+        >
+          <p>Loading projects... please wait</p>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section
+        class="container flex flex-col items-center py-4 pb-8 mx-auto mt-10 space-between-y-4 bg-amber-300 dark:bg-gray-800"
+        id="projects"
+        x-show="projects"
+      >
+        <h2>Featured Projects</h2>
+        <div
+          class="grid grid-cols-1 pl-0 mx-4 mt-12 gap-4 space-y-4 md:grid-cols-2 lg:grid-cols-3"
+          x-init="projects = await (await fetch('https://sa-east-1.aws.data.mongodb-api.com/app/portfolio_api-shhvc/endpoint/projects')).json()"
+        >
+          <template x-for="project in projects">
+            <template x-if="project.featured">
+              <div
+                class="flex flex-col items-center justify-between space-y-4 md:shrink-0"
+              >
+                <h3 x-text="project.title"></h3>
+                <img
+                  alt="Project image"
+                  class="inset-0 w-full h-fit object-cover rounded-lg"
+                  loading="lazy"
+                  x-bind:src="project.image_url"
+                />
+                <p x-text="project.description"></p>
+                <div class="flex flex-row space-x-2">
+                  <template x-if="project.code_url">
+                    <a class="project-link" x-bind:href="project.code_url">
+                      <p>View Source</p>
+                    </a>
+                  </template>
+                  <template x-if="project.deployment_url">
+                    <a
+                      class="project-link"
+                      x-bind:href="project.deployment_url"
+                    >
+                      <p>Test site</p>
+                    </a>
+                  </template>
+                  <template x-if="project.download_url">
+                    <a class="project-link" x-bind:href="project.download_url">
+                      <p>Download Files</p>
+                    </a>
+                  </template>
+                </div>
+              </div>
+            </template>
+          </template>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="contact">
+        <div
+          class="container flex flex-col items-center px-4 mx-auto mt-10 pb-20 space-between-y-4"
+        >
+          <h2>Contact me</h2>
+          <p class="text-sm font-medium mb-5">
+            *Service provided by
+            <a href="https://formsubmit.co/">FormSubmit.co</a>
+          </p>
+          <form
+            action="https://formsubmit.co/bea753eaacdb29392839b0798b47a976"
+            class="space-y-3 sm:w-36 md:w-full max-w-lg"
+            method="POST"
+          >
+            <div>
+              <input
+                class="form-input w-full border-amber-300 dark:border-white dark:text-black"
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+              />
             </div>
-            <div class="photo-container">
-                <img class="photo" src="src/images/JS.jpg" alt="Jorge Sauceda photo">
+            <div>
+              <input
+                class="w-full border-amber-300 dark:border-white dark:text-black"
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
             </div>
-        </section>
-        <section class="sub-section-alternative" id="projects">
-            <h2>Featured Projects</h2>
-            <br><br>
-            <div class="project-container">
-                <div class="project-card">
-                    <h3>Django Recipes</h3>
-                    <img src="src/images/django-simple-recipes.png" alt="Django + UIKit recipes blog" class="project-image">
-                    <p class="subtext">A Full-stack Django + UIKit CSS recipes blog. Here, registered users can create a user profile, submit, edit and delete articles, comments and photo galleries. The UIKit HTML editor is used to edit text</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://github.com/j-sauceda/django_simple_recipes">View Source / </a></p>
-                    <p class="subtext"><a class="project-link" href="https://simplerecipes.jsauceda.repl.co">Test Site</a></p>
-                </div>
-                <div class="project-card">
-                    <h3>Contact Manager</h3>
-                    <img src="src/images/contact-manager.png" alt="MERN + jwt auth + Bulma + Redux contact manager" class="project-image">
-                    <p class="subtext">A Full-stack MongoDB + ExpressJS + ReactJS + NodeJS contact manager. Here, jwt tokens are used for user authorization, Redux is used to manage the state</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://github.com/j-sauceda/mern-contact-manager">View Source / </a></p>
-                    <p class="subtext"><a class="project-link" href="https://jsauceda-mern-contact.herokuapp.com/">Test Site</a></p>
-                </div>
-                <div class="project-card">
-                    <h3>Medical Calendar</h3>
-                    <img src="src/images/medical-calendar.png" alt="Django + ReactJS medical calendar image" class="project-image">
-                    <p class="subtext">A Full-stack Django + ReactJS + TypeScript medical calendar. Here, jwt tokens are used for user authorization, and the frontend communicates with the API through GraphQL</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://github.com/j-sauceda/medical">View Source / </a></p>
-                    <p class="subtext"><a class="project-link" href="https://medical.jsauceda.info">Test Site</a></p>
-                </div>
-                <div class="project-card">
-                    <h3>Data Science Projects</h3>
-                    <img src="src/images/data-science-project.png" alt="Data Science image" class="project-image">
-                    <p class="subtext">Regression and classification performed on public data sets using Jupyter notebooks, Pandas, Scikit-learn, R, caret, and more</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://github.com/j-sauceda/data-science-repo">View Source</a></p>
-                </div>
-                <div class="project-card">
-                    <h3>PhD Thesis Project</h3>
-                    <img src="src/images/neutron-scattering-spectrum-Cu2OSeO3.png" alt="Neutron scattering spectrum plot" class="project-image">
-                    <p class="subtext">Supervised machine learning analysis of neutron scattering data collected from magnetic skyrmion materials at the nuclear reactor at ANSTO</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://doi.org/10.26190/unsworks/24137">View Publication</a></p>
-                </div>
+            <div>
+              <textarea
+                class="form-textarea w-full border-amber-300 dark:border-white dark:text-black"
+                type="text"
+                name="message"
+                placeholder="Please, write your message"
+                required
+              ></textarea>
             </div>
-        </section>
-        <footer id="contact">
-            <h2>Contact me</h2>
-            <form action="https://formsubmit.co/bea753eaacdb29392839b0798b47a976" method="POST">
-                <input type="text" name="name" placeholder="Your name" required>
-                <input type="email" name="email" placeholder="Email address" required>
-                <br><br>
-                <input type="text" 
-                    name="message" 
-                    placeholder="Please, write your message" 
-                    style = "height: 80px; width: 42.0%;" 
-                    required 
-                >
-                <input type="hidden" name="_autoresponse" value="Thanks for your message! I will reply to you soon">
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_subject" value="New contact request">
-                <input type="hidden" name="_template" value="table">
-                <br><br>
-                <button type="submit">Send</button>
-            </form>
-        </footer>
-        <script src="src/app.js"></script>
-    </body>
+            <div>
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Thanks for your message! I will reply to you soon"
+              />
+              <input type="text" name="_honey" style="display: none" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New contact request"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <button
+                class="w-full py-4 mt-3 rounded-lg uppercase bg-amber-300 dark:bg-gray-800 dark:text-white"
+                type="submit"
+              >
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="dist/main.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"
+    ></script>
+  </body>
 </html>
