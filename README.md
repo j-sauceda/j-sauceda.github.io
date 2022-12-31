@@ -1,2 +1,3 @@
-# simple-portfolio
-Simple portfolio built with HTML, CSS, JavaScript, dark/light themes, FontAwesome icons, and FormSubmit email submission
+# Professional Portfolio
+
+This project has been built with MongoDB Realm, Alpine JS, Tailwind CSS, FontAwesome icons, and FormSubmit email submission.
