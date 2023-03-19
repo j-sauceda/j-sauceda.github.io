@@ -1,0 +1,41 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-serif font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  p {
+    @apply font-sans;
+  }
+
+  .navbar-mobile {
+    @apply absolute flex flex-col items-center self-end py-8 mt-4 space-y-5 left-6 right-6 bg-amber-300 bg-opacity-80 drop-shadow-md sm:w-auto sm:self-center md:hidden dark:bg-gray-800 dark:bg-opacity-80;
+  }
+
+  .navbar-item {
+    @apply text-lg hover:text-2xl py-1 dark:text-white;
+  }
+
+  .project-link {
+    @apply py-4 px-6 mt-3 rounded-lg bg-white dark:bg-slate-400;
+  }
+}

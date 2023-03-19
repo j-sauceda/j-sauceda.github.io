@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Jorge Sauceda's Portfolio",
+  "short_name": "Jorge Sauceda",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Jorge Sauceda's Professional Portfolio - built with MongoDB Realm, QwikJS, TailwindCSS, FontAwesome icons & FormSubmit email submission"
+}
