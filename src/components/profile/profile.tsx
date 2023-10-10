@@ -3,7 +3,7 @@ import { Link } from '@builder.io/qwik-city';
 import { SiGithub, SiGitlab, SiGooglescholar, SiLinkedin } from "@qwikest/icons/simpleicons";
 
 import Spinner from '../spinner/spinner';
-import { Image } from '../image/image';
+import ProfilePic from '/media/images/JS.webp?jsx';
 
 import { fetchProfile } from '~/services/fetchProfile';
 import type { ProfileType } from '~/types/ProfileType';
@@ -40,8 +40,8 @@ const Profile = component$(() => {
                 </Link>
               </div>
             </div>
-            <div class="flex items-center justify-center md:w-1/4" style={{ height: '275px', width: '235px' }}>
-              <Image altText="Jorge's photo" height={275} onLoadingText='Loading photo...' src={`/images/${profile.image_url}`} width={235} />
+            <div class="flex items-center justify-center md:w-1/4">
+              <ProfilePic alt="Jorge's photo" class="mb-8 md:mb-2" style={{ height: '275px', width: '235px' }} />
             </div>
           </div>
         </section>

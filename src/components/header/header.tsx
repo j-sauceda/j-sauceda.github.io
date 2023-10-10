@@ -1,7 +1,8 @@
 import { component$, useStore, $ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
 
-import { HiChevronDownOutline, HiChevronUpOutline, HiMoonOutline, HiSunOutline } from "@qwikest/icons/heroicons"
+import { HiChevronDownOutline, HiChevronUpOutline, HiMoonOutline, HiSunOutline } from "@qwikest/icons/heroicons";
+import ImgLogo from "/media/images/logo.webp?jsx";
 
 const Header = component$(() => {
   const store = useStore({
@@ -26,7 +27,7 @@ const Header = component$(() => {
       <nav class="relative container mx-auto p-4 bg-amber-300 dark:bg-gray-800">
         <div class="flex items-center justify-between">
           <div class="p-1">
-            <img class="h-16" src="/images/logo.webp" height={48} width={64} alt="Logo image" />
+            <ImgLogo class="h-16 w-16" alt="Logo image" />
           </div>
           <div class="hidden md:flex space-x-7">
             <Link class="navbar-item" href="#hero">
