@@ -1,9 +1,11 @@
 import { component$, Resource, useResource$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
 
-import { fetchProjects } from '~/services/fetchProjects';
-import type { ProjectType } from '~/shared/ProjectType';
 import Spinner from '../spinner/spinner';
+import { Image } from '../image/image';
+
+import { fetchProjects } from '~/services/fetchProjects';
+import type { ProjectType } from '~/types/ProjectType';
 
 const Projects = component$(() => {
   const useResource = useResource$(() => fetchProjects());
@@ -29,12 +31,7 @@ const Projects = component$(() => {
                 project.featured && (
                   <div class="flex flex-col items-center justify-between space-y-4 md:shrink-0">
                     <h3>{project.title}</h3>
-                    <img
-                      alt="Project image"
-                      class="inset-0 w-full h-fit object-cover rounded-lg"
-                      loading="lazy"
-                      src={`/images/${project.image_url}`}
-                    />
+                    <Image altText="Project's image" extraClasses='inset-0 w-full h-fit object-cover rounded-lg' onLoadingText='Loading image...' src={`/images/${project.image_url}`} width={420} />
                     <p>{project.description}</p>
                     <div class="flex flex-row space-x-2">
                       {project.code_url && (

@@ -1,9 +1,12 @@
 import { component$, Resource, useResource$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
+import { SiGithub, SiGitlab, SiGooglescholar, SiLinkedin } from "@qwikest/icons/simpleicons";
+
+import Spinner from '../spinner/spinner';
+import { Image } from '../image/image';
 
 import { fetchProfile } from '~/services/fetchProfile';
-import type { ProfileType } from '~/shared/ProfileType';
-import Spinner from '../spinner/spinner';
+import type { ProfileType } from '~/types/ProfileType';
 
 const Profile = component$(() => {
   const useResource = useResource$(() => fetchProfile());
@@ -24,25 +27,21 @@ const Profile = component$(() => {
               <div class="flex flex-row justify-between">
                 Find me on:
                 <Link href={profile.linkedin_url} class="social">
-                  <i class="fa-brands fa-linkedin fa-2xl"></i>
+                  <SiLinkedin />
                 </Link>
                 <Link href={profile.github_url} class="social">
-                  <i class="fa-brands fa-github fa-2xl"></i>
+                  <SiGithub />
                 </Link>
                 <Link href={profile.gitlab_url} class="social">
-                  <i class="fa-brands fa-gitlab fa-2xl"></i>
+                  <SiGitlab />
                 </Link>
                 <Link href={profile.google_scholar_url} class="social">
-                  <i class="fa-solid fa-graduation-cap fa-2xl"></i>
+                  <SiGooglescholar />
                 </Link>
               </div>
             </div>
-            <div class="md:w-1/4">
-              <img
-                class="rounded-lg"
-                src={`/images/${profile.image_url}`}
-                alt="Jorge's photo"
-              />
+            <div class="flex items-center justify-center md:w-1/4" style={{ height: '275px', width: '235px' }}>
+              <Image altText="Jorge's photo" height={275} onLoadingText='Loading photo...' src={`/images/${profile.image_url}`} width={235} />
             </div>
           </div>
         </section>

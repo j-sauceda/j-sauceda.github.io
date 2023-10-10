@@ -5,5 +5,5 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "Jorge Sauceda's Professional Portfolio - built with MongoDB Realm, QwikJS, TailwindCSS, FontAwesome icons & FormSubmit email submission"
+  "description": "Jorge Sauceda's Professional Portfolio - built with MongoDB Realm, QwikJS, TailwindCSS, Qwik icons & FormSubmit email submission"
 }

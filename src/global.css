@@ -38,4 +38,8 @@
   .project-link {
     @apply py-4 px-6 mt-3 rounded-lg bg-white dark:bg-slate-400;
   }
+
+  .social {
+    font-size: 32px;
+  }
 }
