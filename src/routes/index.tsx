@@ -14,11 +14,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: 'Welcome to my Portfolio',
+  title: "Jorge Sauceda's Portfolio",
   meta: [
     {
       name: 'description',
-      content: 'Jorge Sauceda\'s Professional Portfolio has been built using MongoDB Realm, QwikJS, Tailwind CSS, FontAwesome icons, and FormSubmit email submission',
+      content: 'Jorge Sauceda\'s Professional Portfolio has been built using MongoDB Realm, QwikJS, Tailwind CSS, Qwik icons, and FormSubmit email submission',
     },
   ],
 };

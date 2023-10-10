@@ -1,6 +1,8 @@
 import { component$, useStore, $ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
 
+import { HiChevronDownOutline, HiChevronUpOutline, HiMoonOutline, HiSunOutline } from "@qwikest/icons/heroicons"
+
 const Header = component$(() => {
   const store = useStore({
     lightTheme: true,
@@ -24,7 +26,7 @@ const Header = component$(() => {
       <nav class="relative container mx-auto p-4 bg-amber-300 dark:bg-gray-800">
         <div class="flex items-center justify-between">
           <div class="p-1">
-            <img class="h-16" src="/images/logo.webp" alt="Logo image" />
+            <img class="h-16" src="/images/logo.webp" height={48} width={64} alt="Logo image" />
           </div>
           <div class="hidden md:flex space-x-7">
             <Link class="navbar-item" href="#hero">
@@ -43,21 +45,12 @@ const Header = component$(() => {
                 store.lightTheme = !store.lightTheme;
                 toggleTheme();
               }}
+              style={{ fontSize: '24px' }}
             >
-              <i
-                class={`fa-regular fa-xl dark:text-white ${
-                  store.lightTheme ? 'fa-moon' : 'fa-sun'
-                }`}
-              ></i>
+              {store.lightTheme ? <HiMoonOutline /> : <HiSunOutline />}
             </button>
-            <button class="block md:hidden" onClick$={() => toggleMenu()}>
-              <i
-                class={`fa-solid fa-xl ${
-                  !store.showMenu
-                    ? 'fa-circle-chevron-down'
-                    : 'fa-circle-chevron-up'
-                }`}
-              ></i>
+            <button class="block md:hidden" style={{ fontSize: '24px' }} onClick$={() => toggleMenu()}>
+              {store.showMenu ? <HiChevronUpOutline /> : <HiChevronDownOutline />}
             </button>
           </div>
         </div>

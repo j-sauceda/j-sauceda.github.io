@@ -1,6 +1,6 @@
 export const fetchProjects = async () => {
-  const url =
-    'https://sa-east-1.aws.data.mongodb-api.com/app/portfolio_api-shhvc/endpoint/projects';
+  const base_url = import.meta.env.PUBLIC_BASE_URL;
+  const url = base_url + 'projects';
 
   try {
     const data = await fetch(url, { method: 'GET' });
