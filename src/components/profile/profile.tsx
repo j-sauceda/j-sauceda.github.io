@@ -41,7 +41,7 @@ const Profile = component$(() => {
               </div>
             </div>
             <div class="flex items-center justify-center md:w-1/4">
-              <ProfilePic alt="Jorge's photo" class="mb-8 md:mb-2" style={{ height: '275px', width: '235px' }} />
+              <ProfilePic alt="Jorge's photo" class="mb-8 md:mb-2" style={{ width: '235px' }} />
             </div>
           </div>
         </section>
