@@ -34,9 +34,9 @@ const Projects = component$(() => {
                     <PortfolioImage altText="Project's image" extraClasses='inset-0 w-full h-fit object-cover rounded-lg' onLoadingText='Loading image...' src={`/images/${project.image_url}`} width={420} />
                     <p>{project.description}</p>
                     <div class="flex flex-row space-x-2">
-                      {project.code_url && (
-                        <Link class="project-link" href={project.code_url}>
-                          <p>View Source</p>
+                      {project.backend_url && (
+                        <Link class="project-link" href={project.backend_url}>
+                          <p>Backend code</p>
                         </Link>
                       )}
                       {project.deployment_url && (
@@ -50,6 +50,16 @@ const Projects = component$(() => {
                       {project.download_url && (
                         <Link class="project-link" href={project.download_url}>
                           <p>Download Files</p>
+                        </Link>
+                      )}
+                      {project.frontend_url && (
+                        <Link class="project-link" href={project.frontend_url}>
+                          <p>Frontend Code</p>
+                        </Link>
+                      )}
+                      {project.monorepo_url && (
+                        <Link class="project-link" href={project.monorepo_url}>
+                          <p>View Repository</p>
                         </Link>
                       )}
                     </div>
