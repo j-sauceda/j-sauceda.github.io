@@ -1,11 +1,13 @@
 export type ProjectType = {
   _id: string;
-  title: string;
-  image_url: string;
-  featured: boolean;
-  description: string;
-  code_url: string;
-  deployment_url: string;
-  download_url: string;
+  backend_url?: string;
   categories: string[];
+  description: string;
+  deployment_url?: string;
+  download_url?: string;
+  featured: boolean;
+  frontend_url?: string;
+  image_url: string;
+  monorepo_url?: string;
+  title: string;
 };
