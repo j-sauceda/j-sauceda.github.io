@@ -47,6 +47,11 @@ const Footer = component$(() => {
               name="_autoresponse"
               value="Thanks for your message! I will reply to you soon"
             />
+            <input 
+              type="hidden" 
+              name="_blacklist" 
+              value="caredogbest, jsauceda.info" 
+            />
             <input type="text" name="_honey" style="display: none" />
             <input type="hidden" name="_subject" value="New contact request" />
             <input type="hidden" name="_template" value="table" />
