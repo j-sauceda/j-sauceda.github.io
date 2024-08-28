@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$ } from "@builder.io/qwik";
 
 const Footer = component$(() => {
   return (
@@ -35,7 +35,6 @@ const Footer = component$(() => {
           <div>
             <textarea
               class="form-textarea w-full border-amber-300 dark:border-white dark:text-black"
-              // type="text"
               name="message"
               placeholder="Please, write your message"
               required
@@ -47,10 +46,10 @@ const Footer = component$(() => {
               name="_autoresponse"
               value="Thanks for your message! I will reply to you soon"
             />
-            <input 
-              type="hidden" 
-              name="_blacklist" 
-              value="caredogbest, jsauceda.info" 
+            <input
+              type="hidden"
+              name="_blacklist"
+              value="societees223, caredogbest, jsauceda.info"
             />
             <input type="text" name="_honey" style="display: none" />
             <input type="hidden" name="_subject" value="New contact request" />
