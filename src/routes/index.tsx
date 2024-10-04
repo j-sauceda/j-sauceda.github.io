@@ -1,8 +1,47 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, noSerialize } from '@builder.io/qwik';
+import { routeLoader$ } from '@builder.io/qwik-city';
 import type { DocumentHead } from '@builder.io/qwik-city';
+
+import connectDB from '~/db/connectDB';
+import ProfileSchema from '~/db/ProfileSchema';
+import ProjectSchema from '~/db/ProjectSchema';
 
 import Projects from "~/components/projects/projects";
 import Profile from "~/components/profile/profile";
+
+export const useFetchProfile = routeLoader$(async () => {
+  try {
+    await connectDB();
+
+    const data = await ProfileSchema.findOne();
+
+    if (!data) {
+      return null;
+    }
+    
+    return noSerialize(data);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+export const useFetchProjects = routeLoader$(async () => {
+  try {
+    await connectDB();
+
+    const data = await ProjectSchema.find({
+      featured: true,
+    });
+
+    if (!data) {
+      return [];
+    }
+    
+    return noSerialize(data);
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 export default component$(() => {
   return (
