@@ -1,12 +1,11 @@
 import { component$, useStore, $ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
-import {
-  HiChevronDownOutline,
-  HiChevronUpOutline,
-  HiMoonOutline,
-  HiSunOutline,
-} from "@qwikest/icons/heroicons";
+import ChevronDownIcon from "../icons/ChevronDownIcon";
+import ChevronUpIcon from "../icons/ChevronUpIcon";
+import MoonIcon from "../icons/MoonIcon";
+import SunIcon from "../icons/SunIcon";
+
 import ImgLogo from "/media/images/logo.webp?jsx";
 
 const Header = component$(() => {
@@ -53,18 +52,14 @@ const Header = component$(() => {
               }}
               style={{ fontSize: "24px" }}
             >
-              {store.lightTheme ? <HiMoonOutline /> : <HiSunOutline />}
+              {store.lightTheme ? <MoonIcon /> : <SunIcon />}
             </button>
             <button
               class="block md:hidden"
               style={{ fontSize: "24px" }}
               onClick$={() => toggleMenu()}
             >
-              {store.showMenu ? (
-                <HiChevronUpOutline />
-              ) : (
-                <HiChevronDownOutline />
-              )}
+              {store.showMenu ? <ChevronUpIcon isLightTheme={store.lightTheme} /> : <ChevronDownIcon isLightTheme={store.lightTheme} />}
             </button>
           </div>
         </div>

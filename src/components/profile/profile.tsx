@@ -1,14 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import {
-  SiGithub,
-  SiGitlab,
-  SiGooglescholar,
-  SiLinkedin,
-} from "@qwikest/icons/simpleicons";
 
 import Spinner from "../spinner/spinner";
 import ProfilePic from "/media/images/JS.webp?jsx";
+
+import GithubIcon from "../icons/GithubIcon";
+import GitlabIcon from "../icons/GitlabIcon";
+import ScholarIcon from "../icons/ScholarIcon";
+import LinkedinIcon from "../icons/LinkedinIcon";
 
 import { useFetchProfile } from "~/routes";
 import type { ProfileType } from "~/types/ProfileType";
@@ -31,16 +30,16 @@ const Profile = component$(() => {
           <div class="flex flex-row justify-between">
             Find me on:
             <Link href={data.linkedin_url} class="social">
-              <SiLinkedin />
+              <LinkedinIcon />
             </Link>
             <Link href={data.github_url} class="social">
-              <SiGithub />
+              <GithubIcon />
             </Link>
             <Link href={data.gitlab_url} class="social">
-              <SiGitlab />
+              <GitlabIcon />
             </Link>
             <Link href={data.google_scholar_url} class="social">
-              <SiGooglescholar />
+              <ScholarIcon />
             </Link>
           </div>
         </div>
