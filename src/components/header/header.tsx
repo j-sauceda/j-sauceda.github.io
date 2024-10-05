@@ -1,7 +1,12 @@
-import { component$, useStore, $ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
+import { component$, useStore, $ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
-import { HiChevronDownOutline, HiChevronUpOutline, HiMoonOutline, HiSunOutline } from "@qwikest/icons/heroicons";
+import {
+  HiChevronDownOutline,
+  HiChevronUpOutline,
+  HiMoonOutline,
+  HiSunOutline,
+} from "@qwikest/icons/heroicons";
 import ImgLogo from "/media/images/logo.webp?jsx";
 
 const Header = component$(() => {
@@ -12,9 +17,9 @@ const Header = component$(() => {
 
   const toggleTheme = $(() => {
     if (!store.lightTheme) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   });
 
@@ -46,12 +51,20 @@ const Header = component$(() => {
                 store.lightTheme = !store.lightTheme;
                 toggleTheme();
               }}
-              style={{ fontSize: '24px' }}
+              style={{ fontSize: "24px" }}
             >
               {store.lightTheme ? <HiMoonOutline /> : <HiSunOutline />}
             </button>
-            <button class="block md:hidden" style={{ fontSize: '24px' }} onClick$={() => toggleMenu()}>
-              {store.showMenu ? <HiChevronUpOutline /> : <HiChevronDownOutline />}
+            <button
+              class="block md:hidden"
+              style={{ fontSize: "24px" }}
+              onClick$={() => toggleMenu()}
+            >
+              {store.showMenu ? (
+                <HiChevronUpOutline />
+              ) : (
+                <HiChevronDownOutline />
+              )}
             </button>
           </div>
         </div>

@@ -1,5 +1,5 @@
-import { component$ } from '@builder.io/qwik';
-import type { SpinnerProps } from '~/types/SpinnerProps';
+import { component$ } from "@builder.io/qwik";
+import type { SpinnerProps } from "~/types/SpinnerProps";
 
 const Spinner = component$((props: SpinnerProps) => {
   return (

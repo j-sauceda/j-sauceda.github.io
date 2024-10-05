@@ -1,21 +1,23 @@
-import { component$ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
+import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
-import Spinner from '../spinner/spinner';
-import PortfolioImage from '../image/image';
+import Spinner from "../spinner/spinner";
+import PortfolioImage from "../image/image";
 
-import { useFetchProjects } from '~/routes';
-import type { ProjectType } from '~/types/ProjectType';
+import { useFetchProjects } from "~/routes";
+import type { ProjectType } from "~/types/ProjectType";
 
 const Projects = component$(() => {
   const signal = useFetchProjects();
   const projects = signal.value as ProjectType[];
 
   if (!projects) {
-    return <Spinner
-      bgClass="bg-amber-300 dark:bg-gray-800"
-      text="Loading projects... please wait"
-    />;
+    return (
+      <Spinner
+        bgClass="bg-amber-300 dark:bg-gray-800"
+        text="Loading projects... please wait"
+      />
+    );
   }
 
   return (
@@ -30,7 +32,13 @@ const Projects = component$(() => {
             project.featured && (
               <div class="flex flex-col items-center justify-between space-y-4 md:shrink-0">
                 <h3>{project.title}</h3>
-                <PortfolioImage altText="Project's image" extraClasses='inset-0 w-full h-fit object-cover rounded-lg' onLoadingText='Loading image...' src={`/images/${project.image_url}`} width={420} />
+                <PortfolioImage
+                  altText="Project's image"
+                  extraClasses="inset-0 w-full h-fit object-cover rounded-lg"
+                  onLoadingText="Loading image..."
+                  src={`/images/${project.image_url}`}
+                  width={420}
+                />
                 <p>{project.description}</p>
                 <div class="flex flex-row space-x-2">
                   {project.backend_url && (
@@ -39,10 +47,7 @@ const Projects = component$(() => {
                     </Link>
                   )}
                   {project.deployment_url && (
-                    <Link
-                      class="project-link"
-                      href={project.deployment_url}
-                    >
+                    <Link class="project-link" href={project.deployment_url}>
                       <p>Test site</p>
                     </Link>
                   )}

@@ -1,4 +1,4 @@
-import process from "node:process";
+// import process from "node:process";
 import mongoose from "mongoose";
 
 let isConnected = false;
@@ -13,14 +13,13 @@ let isConnected = false;
  *
  * If a connection error occurs, an error message will be logged to the console.
  */
-const connectDB = async () => {
+const connectDB = async (uri: string) => {
   if (isConnected) {
     return;
   }
 
   try {
-    const URI = process.env.MONGODB_URI || "";
-    const db = await mongoose.connect(URI, {
+    const db = await mongoose.connect(uri, {
       dbName: "portfolio",
       maxPoolSize: 10,
     });
@@ -32,6 +31,6 @@ const connectDB = async () => {
   } catch (error) {
     console.error(`MongoDB connection error: ${error}`);
   }
-}
+};
 
 export default connectDB;

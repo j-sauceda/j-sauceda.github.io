@@ -68,7 +68,6 @@ The production build will generate client and server modules by running both cli
 npm run build # or `yarn build`
 ```
 
-
 ## Vercel Edge
 
 This starter site is configured to deploy to [Vercel Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions), which means it will be rendered at an edge location near to your users.

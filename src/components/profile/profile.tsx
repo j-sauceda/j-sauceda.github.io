@@ -1,12 +1,17 @@
-import { component$ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
-import { SiGithub, SiGitlab, SiGooglescholar, SiLinkedin } from "@qwikest/icons/simpleicons";
+import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
+import {
+  SiGithub,
+  SiGitlab,
+  SiGooglescholar,
+  SiLinkedin,
+} from "@qwikest/icons/simpleicons";
 
-import Spinner from '../spinner/spinner';
-import ProfilePic from '/media/images/JS.webp?jsx';
+import Spinner from "../spinner/spinner";
+import ProfilePic from "/media/images/JS.webp?jsx";
 
-import { useFetchProfile } from '~/routes';
-import type { ProfileType } from '~/types/ProfileType';
+import { useFetchProfile } from "~/routes";
+import type { ProfileType } from "~/types/ProfileType";
 
 const Profile = component$(() => {
   const signal = useFetchProfile();
@@ -40,7 +45,11 @@ const Profile = component$(() => {
           </div>
         </div>
         <div class="flex items-center justify-center md:w-1/4">
-          <ProfilePic alt="Jorge's photo" class="mb-8 md:mb-2" style={{ width: '235px' }} />
+          <ProfilePic
+            alt="Jorge's photo"
+            class="mb-8 md:mb-2"
+            style={{ width: "235px" }}
+          />
         </div>
       </div>
     </section>
