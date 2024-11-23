@@ -34,7 +34,7 @@ export const useFetchProjects = routeLoader$(async (requestEvent) => {
       featured: true,
     });
 
-    if (!data) {
+    if (data.length === 0) {
       return [];
     }
 

@@ -11,6 +11,7 @@ const Projects = component$(() => {
   const signal = useFetchProjects();
   const projects = signal.value as ProjectType[];
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!projects) {
     return (
       <Spinner

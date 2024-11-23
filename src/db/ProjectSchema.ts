@@ -43,4 +43,5 @@ const ProjectSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Project", ProjectSchema);
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+export default mongoose.models?.Project || mongoose.model("Project", ProjectSchema);

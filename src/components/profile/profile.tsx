@@ -16,6 +16,7 @@ const Profile = component$(() => {
   const signal = useFetchProfile();
   const data = signal.value as unknown as ProfileType;
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!data) {
     return <Spinner bgClass="" text="Loading profile... please wait" />;
   }

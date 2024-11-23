@@ -18,6 +18,10 @@ const connectDB = async (uri: string) => {
   }
 
   try {
+    if (uri === "") {
+      console.log("No MongoDB URI provided");
+    }
+
     const db = await mongoose.connect(uri, {
       dbName: "portfolio",
       maxPoolSize: 10,

@@ -31,4 +31,5 @@ const ProfileSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Profile", ProfileSchema);
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+export default mongoose.models?.Profile || mongoose.model("Profile", ProfileSchema);
