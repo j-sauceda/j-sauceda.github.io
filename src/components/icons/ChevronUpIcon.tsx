@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
 interface Props {
-  isLightTheme: boolean
+  isLightTheme: boolean;
 }
 
 const ChevronUpIcon = component$((props: Props) => {

@@ -1,18 +1,14 @@
 /**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
  */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   h1 {
-    @apply text-4xl font-serif font-bold;
+    @apply font-serif text-4xl font-bold;
   }
 
   h2 {
@@ -28,15 +24,15 @@
   }
 
   .navbar-mobile {
-    @apply absolute flex flex-col items-center self-end py-8 mt-4 space-y-5 left-6 right-6 bg-amber-300 bg-opacity-80 drop-shadow-md sm:w-auto sm:self-center md:hidden dark:bg-gray-800 dark:bg-opacity-80;
+    @apply absolute left-6 right-6 mt-4 flex flex-col items-center space-y-5 self-end bg-amber-300 bg-opacity-80 py-8 drop-shadow-md dark:bg-gray-800 dark:bg-opacity-80 sm:w-auto sm:self-center md:hidden;
   }
 
   .navbar-item {
-    @apply text-lg hover:text-2xl py-1 dark:text-white;
+    @apply py-1 text-lg hover:text-2xl dark:text-white;
   }
 
   .project-link {
-    @apply py-4 px-6 mt-3 rounded-lg bg-white dark:bg-slate-400;
+    @apply mt-3 rounded-lg bg-white px-6 py-4 dark:bg-slate-400;
   }
 
   .social {

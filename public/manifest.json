@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "Jorge Sauceda's Portfolio",
-  "short_name": "Jorge Sauceda",
+  "name": "qwik-project-name",
+  "short_name": "Welcome to Qwik",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "Jorge Sauceda's Professional Portfolio - built with MongoDB Realm, QwikJS, TailwindCSS, Qwik icons & FormSubmit email submission"
+  "description": "A Qwik project app."
 }

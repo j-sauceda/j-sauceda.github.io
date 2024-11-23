@@ -1,6 +1,4 @@
 # Build
-.env
-.env.local
 /dist
 /lib
 /lib-types
@@ -8,6 +6,8 @@
 
 # Development
 node_modules
+.env
+*.local
 
 # Cache
 .cache
@@ -26,7 +26,9 @@ lerna-debug.log*
 
 # Editor
 .vscode/*
-!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/*.code-snippets
+
 .idea
 .DS_Store
 *.suo

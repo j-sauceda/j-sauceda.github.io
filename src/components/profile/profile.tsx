@@ -14,7 +14,7 @@ import type { ProfileType } from "~/types/ProfileType";
 
 const Profile = component$(() => {
   const signal = useFetchProfile();
-  const data = signal.value as ProfileType;
+  const data = signal.value as unknown as ProfileType;
 
   if (!data) {
     return <Spinner bgClass="" text="Loading profile... please wait" />;
@@ -22,12 +22,12 @@ const Profile = component$(() => {
 
   return (
     <section id="hero">
-      <div class="container flex flex-col-reverse items-center px-4 mx-auto mt-10 space-between-y-4 md:space-y-0 md:flex-row">
-        <div class="flex flex-col mb-20 mr-10 space-y-10 md:w-3/4">
+      <div class="space-between-y-4 container mx-auto mt-10 flex flex-col-reverse items-center px-4 md:flex-row md:space-y-0">
+        <div class="mb-20 mr-10 flex flex-col space-y-10 md:w-3/4">
           <h1 class="max-w-md">{data.name}</h1>
           <p class="font-medium">{data.degree}</p>
           <p>{data.description}</p>
-          <div class="flex flex-row justify-between">
+          <div class="flex flex-row justify-between align-middle">
             Find me on:
             <Link href={data.linkedin_url} class="social">
               <LinkedinIcon />

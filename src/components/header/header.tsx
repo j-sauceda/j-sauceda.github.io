@@ -28,12 +28,12 @@ const Header = component$(() => {
 
   return (
     <>
-      <nav class="relative container mx-auto p-4 bg-amber-300 dark:bg-gray-800">
+      <nav class="container relative mx-auto bg-amber-300 p-4 dark:bg-gray-800">
         <div class="flex items-center justify-between">
           <div class="p-1">
             <ImgLogo class="h-16 w-16" alt="Logo image" />
           </div>
-          <div class="hidden md:flex space-x-7">
+          <div class="hidden space-x-7 md:flex">
             <Link class="navbar-item" href="#hero">
               About
             </Link>
@@ -59,7 +59,11 @@ const Header = component$(() => {
               style={{ fontSize: "24px" }}
               onClick$={() => toggleMenu()}
             >
-              {store.showMenu ? <ChevronUpIcon isLightTheme={store.lightTheme} /> : <ChevronDownIcon isLightTheme={store.lightTheme} />}
+              {store.showMenu ? (
+                <ChevronUpIcon isLightTheme={store.lightTheme} />
+              ) : (
+                <ChevronDownIcon isLightTheme={store.lightTheme} />
+              )}
             </button>
           </div>
         </div>

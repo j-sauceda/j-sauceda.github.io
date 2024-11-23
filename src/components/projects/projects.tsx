@@ -22,11 +22,11 @@ const Projects = component$(() => {
 
   return (
     <section
-      class="container flex flex-col items-center py-4 pb-8 mx-auto mt-10 space-between-y-4 bg-amber-300 dark:bg-gray-800"
+      class="space-between-y-4 container mx-auto mt-10 flex flex-col items-center bg-amber-300 py-4 pb-8 dark:bg-gray-800"
       id="projects"
     >
       <h2>Featured Projects</h2>
-      <div class="grid grid-cols-1 pl-0 mx-4 mt-12 gap-4 space-y-4 md:grid-cols-2 lg:grid-cols-3">
+      <div class="mx-4 mt-12 grid grid-cols-1 gap-4 space-y-4 pl-0 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => {
           return (
             project.featured && (
