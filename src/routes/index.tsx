@@ -3,42 +3,60 @@ import { routeLoader$ } from "@builder.io/qwik-city";
 
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import connectDB from "~/db/connectDB";
-import ProfileSchema from "~/db/ProfileSchema";
-import ProjectSchema from "~/db/ProjectSchema";
-
 import Projects from "~/components/projects/projects";
 import Profile from "~/components/profile/profile";
 
-export const useFetchProfile = routeLoader$(async (requestEvent) => {
-  try {
-    await connectDB(requestEvent.env.get("MONGODB_URI") || "");
+const baseUrl = "https://cloud.appwrite.io/v1/databases";
 
-    const data = await ProfileSchema.findOne();
+export const useFetchProfile = routeLoader$(async (requestEvent) => {
+  const PROJECT_ID = requestEvent.env.get("PROJECT_ID") || "";
+  const DATABASE_ID = requestEvent.env.get("DATABASE_ID") || "";
+  const PROFILE_COLLECTION = requestEvent.env.get("PROFILE_COLLECTION_ID") || "";
+
+  const url = `${baseUrl}/${DATABASE_ID}/collections/${PROFILE_COLLECTION}/documents`;
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "X-Appwrite-Project": PROJECT_ID,
+      },
+    });
+
+    const data = await response.json();
 
     if (!data) {
       return null;
     }
 
-    return noSerialize(data);
+    return noSerialize(data.documents[0]);
   } catch (error) {
     console.log(error);
   }
 });
 
 export const useFetchProjects = routeLoader$(async (requestEvent) => {
-  try {
-    await connectDB(requestEvent.env.get("MONGODB_URI") || "");
+  const PROJECT_ID = requestEvent.env.get("PROJECT_ID") || "";
+  const DATABASE_ID = requestEvent.env.get("DATABASE_ID") || "";
+  const PROJECTS_COLLECTION = requestEvent.env.get("PROJECTS_COLLECTION_ID") || "";
 
-    const data = await ProjectSchema.find({
-      featured: true,
+  const url = `${baseUrl}/${DATABASE_ID}/collections/${PROJECTS_COLLECTION}/documents`;
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "X-Appwrite-Project": PROJECT_ID,
+      },
     });
+
+    const data = await response.json();
 
     if (data.length === 0) {
       return [];
     }
 
-    return noSerialize(data);
+    return noSerialize(data.documents);
   } catch (error) {
     console.log(error);
   }

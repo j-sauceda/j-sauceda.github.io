@@ -1,6 +1,7 @@
 {
-  "name": "my-qwik-empty-starter",
-  "description": "Blank project with routing included",
+  "name": "professional-portfolio",
+  "version": "3.2",
+  "description": "This developer portfolio has been built with QwikJS, TailwindCSS, Qwik icons, and FormSubmit email submission",
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
@@ -48,8 +49,5 @@
     "vercel": "^29.1.1",
     "vite": "5.3.5",
     "vite-tsconfig-paths": "^4.2.1"
-  },
-  "dependencies": {
-    "mongoose": "^8.8.2"
   }
 }
