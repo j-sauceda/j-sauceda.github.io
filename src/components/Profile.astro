@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+
+import profilePic from "../images/JS.webp";
+import GithubIcon from "./icons/GithubIcon.astro";
+import GitlabIcon from "./icons/GitlabIcon.astro";
+import ScholarIcon from "./icons/ScholarIcon.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+
+import * as data from "../content/profile.md";
+---
+
+<section id="hero">
+  <div
+    class="space-between-y-4 container mx-auto mt-10 flex flex-col-reverse items-center px-4 md:flex-row md:space-y-0"
+  >
+    <div class="mb-20 mr-10 flex flex-col space-y-10 md:w-3/4">
+      <h1 class="max-w-md">{data.frontmatter.name}</h1>
+      <p class="font-medium">{data.frontmatter.degree}</p>
+
+      <p>{data.rawContent()}</p>
+
+      <div class="flex flex-row justify-between align-middle">
+        Find me on:
+        <a href={data.frontmatter.linkedin_url} class="social">
+          <LinkedinIcon />
+        </a>
+        <a href={data.frontmatter.github_url} class="social">
+          <GithubIcon />
+        </a>
+        <a href={data.frontmatter.gitlab_url} class="social">
+          <GitlabIcon />
+        </a>
+        <a href={data.frontmatter.google_scholar_url} class="social">
+          <ScholarIcon />
+        </a>
+      </div>
+    </div>
+    <div class="flex items-center justify-center md:w-1/4">
+      <Image
+        src={profilePic}
+        alt="Jorge's photo"
+        class="mb-8 md:mb-2"
+        style={{ width: "235px" }}
+      />
+    </div>
+  </div>
+</section>

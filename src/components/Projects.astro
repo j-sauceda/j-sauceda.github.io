@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { getCollection } from "astro:content";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/images/projects/*.webp",
+);
+const projects = await getCollection("projects");
+---
+
+<section
+  class="space-between-y-4 container mx-auto mt-10 flex flex-col items-center bg-amber-300 py-4 pb-8 dark:bg-gray-600"
+  id="projects"
+>
+  <h2>Open Source Projects</h2>
+  <div
+    class="mx-4 mt-12 grid grid-cols-1 gap-4 space-y-4 pl-0 md:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      projects.map((project) => {
+        const { data } = project;
+        console.log(images[`/src/images/projects/${data.image_url}`]());
+
+        return (
+          <div class="flex flex-col items-center justify-between space-y-4 md:shrink-0">
+            <h3>{data.title}</h3>
+            <Image
+              alt="Project's image"
+              class="inset-0 w-full h-fit object-cover rounded-lg"
+              src={images[`/src/images/projects/${data.image_url}`]()}
+              style={{ width: "420px", height: "auto" }}
+            />
+            <p>{project.body}</p>
+            <div class="flex flex-row space-x-2">
+              {data.backend_url && (
+                <a class="project-link" href={data.backend_url}>
+                  <p>Backend code</p>
+                </a>
+              )}
+              {data.deployment_url && (
+                <a class="project-link" href={data.deployment_url}>
+                  <p>Test site</p>
+                </a>
+              )}
+              {data.download_url && (
+                <a class="project-link" href={data.download_url}>
+                  <p>Download Files</p>
+                </a>
+              )}
+              {data.frontend_url && (
+                <a class="project-link" href={data.frontend_url}>
+                  <p>Frontend Code</p>
+                </a>
+              )}
+              {data.monorepo_url && (
+                <a class="project-link" href={data.monorepo_url}>
+                  <p>View Repository</p>
+                </a>
+              )}
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
